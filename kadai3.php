@@ -18,12 +18,24 @@ function tasu($a,$b){
     echo "\n";
 /*3.$arr という配列の仮引数を持ち、数値が入った配列array(1, 3, 5 ,7, 9) を渡すと
 その要素をすべてかけた結果を返す関数を作成してください*/
-function kakezan($arr){
+
+/*誤function kakezan($arr){
     $array = $arr[0]* $arr[1]* $arr[2]* $arr[3]* $arr[4];
     return $array;
     }
-    echo kakezan([1,3,5,7,9]);
-    echo "\n";
+    echo kakezan([1,3,5,7,9]);*/
+
+function kakezan($arr){
+ $ret = 1;
+        
+    foreach ($arr as $value) {
+    $ret = $ret * $value;
+    }
+            
+return $ret;
+}
+echo kakezan([1,3,5,7,9]);
+echo "\n";
 /*4.【応用】　下記のプログラムは、配列の中で1番大きい値を返す max_array という関数
 を実装しようとしています。途中の部分を完成させてください*/
 function max_array($arr){
