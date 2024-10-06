@@ -25,6 +25,19 @@ function tasu($a,$b){
     }
     echo kakezan([1,3,5,7,9]);*/
 
+  /*for文での書き換え
+    function kakezan($arr){
+        $ret = 1;
+        　　//<=count($arr)にするとエラーになるのは何故
+        　　//ループ処理は０番目から７未満（6番目）で止まるようにしてるから７も含めると7番目に引数はないためエラーとなる
+        for ($i = 0; $i < count($arr); $i++) {
+            $ret *= $arr[$i];
+        }
+    return $ret;
+    }
+        
+　　 echo kakezan([2,5,9,8,3,9,3]); */
+
 function kakezan($arr){
  $ret = 1;
         
